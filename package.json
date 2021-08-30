@@ -6,9 +6,11 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    
     "start": "node server.js",
 
     "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
 
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix tinder-clone && npm run build --prefix tinder-clone"
 
